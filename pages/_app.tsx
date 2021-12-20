@@ -9,7 +9,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
       <Box>
         <Container borderRadius="sm" backgroundColor="white" boxShadow="md" marginY={4} maxWidth="container.lg" padding={4}>
           <VStack marginBottom={6}>
-            <Image borderRadius={9999} alt="" src="//placehold.it/128x128"></Image>
+            <Image borderRadius={9999} alt="" src="https://via.placeholder.com/128"></Image>
             <Heading color="black">Bienvenidos</Heading>
             <Text  color="black">Al almacen del Barrio</Text>
           </VStack>
