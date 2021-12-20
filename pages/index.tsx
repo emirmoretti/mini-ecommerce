@@ -37,7 +37,7 @@ const IndexRoute: React.FC<Props> = ({ products }) => {
           </Stack>)}
       </Grid>
       {Boolean(cart.length) && <Flex alingItems="center" justifyContent="center" padding={4} position="sticky" bottom={0}>
-        <Button width="fit-auto"  as={Link} href={`https://wa.me/543412754980?text=${encodeURIComponent(text)}`} isExternal colorScheme="whatsapp">Completar pedido ({cart.length} productos)</Button></Flex>}
+        <Button width="fit-auto" as={Link} href={`https://wa.me/543412754980?text=${encodeURIComponent(text)}`} isExternal colorScheme="whatsapp">Completar pedido ({cart.length} productos)</Button></Flex>}
     </Stack >
   );
 };
@@ -45,6 +45,7 @@ const IndexRoute: React.FC<Props> = ({ products }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const products = await api.list()
   return {
+    revalidate: 10,
     props: {
       products,
     },
