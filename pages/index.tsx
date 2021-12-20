@@ -40,7 +40,7 @@ const IndexRoute: React.FC<Props> = ({ products }) => {
             </Stack>)}
         </Grid>
         {Boolean(cart.length) && <Flex alingItems="center" justifyContent="center" padding={4} position="sticky" bottom={0}>
-          <Button width="fit-auto" as={Link} href={`https://wa.me/543412754980?text=${encodeURIComponent(text)}`} isExternal colorScheme="whatsapp">Completar pedido ({cart.length} productos)</Button></Flex>}
+          <Button leftIcon={<Image src="https://icongr.am/fontawesome/whatsapp.svg?size=32&color=ffffff" />} width="fit-auto" as={Link} href={`https://wa.me/543412754980?text=${encodeURIComponent(text)}`} isExternal colorScheme="whatsapp">Completar pedido ({cart.length} productos)</Button></Flex>}
       </Stack>
       <AnimatePresence>
         {selectedImage && <Flex key="backdrop"
